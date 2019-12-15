@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ${APP_NAME:eshop-inventory}
+  datasource:
+    url: jdbc:mysql://${MYSQL_SERVER:127.0.0.1}:${MYSQL_PORT:3306}/eshop
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:roger1234}
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    # password: ${REDIS_PASSWORD:roger1234}
+server:
+  port: 10001
+
+# redis
