@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rogercw.eshop.inventory.mapper.InventoryMapper">
+    <resultMap id="BaseResultType" type="com.rogercw.eshop.inventory.entity.InventoryEntity">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="product_id" property="productId" jdbcType="BIGINT"/>
+        <result column="quantity" property="quantity" jdbcType="INT"/>
+    </resultMap>
+    
+    <select id="findByProductId" resultMap="BaseResultType">
+        select id, product_id, quantity from eshop_inventory
+        where product_id = #{productId}
+    </select>
+    
+    <update id="updateProductQuantity">
+        update eshop_inventory
+        set quantity = #{quantity}
+        where product_id = #{productId}
+    </update>
+
+</mapper>

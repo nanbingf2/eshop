@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>eshop-inventory</module>
+        <module>eureka-server</module>
     </modules>
 
     <parent>
@@ -37,6 +38,8 @@
         <commons-io.version>2.6</commons-io.version>
         <httpclient.version>4.5.7</httpclient.version>
         <java.version>1.8</java.version>
+
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
     <!--版本管理-->
@@ -98,6 +101,14 @@
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
         </dependencies>

@@ -13,4 +13,13 @@ spring:
 server:
   port: 10001
 
-# redis
+# mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.Mapper.xml
+logging:
+  level:
+    com:
+      rogercw:
+        eshop:
+          inventory:
+            mapper: debug
