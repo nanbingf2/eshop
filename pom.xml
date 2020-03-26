@@ -7,6 +7,13 @@
     <modules>
         <module>eshop-inventory</module>
         <module>eureka-server</module>
+        <module>say-hello-service</module>
+        <module>greeting-service</module>
+        <module>hystrix-turbine-server</module>
+        <module>zuul-server</module>
+        <module>config-server</module>
+        <module>sleuth-server</module>
+        <module>user-service</module>
     </modules>
 
     <parent>
@@ -39,7 +46,7 @@
         <httpclient.version>4.5.7</httpclient.version>
         <java.version>1.8</java.version>
 
-        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
 
     <!--版本管理-->
